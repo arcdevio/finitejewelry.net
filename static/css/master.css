@@ -1,0 +1,364 @@
+@font-face {
+	font-family: 'Italianno';
+	src: url('../fonts/Italianno/Italianno-Regular.ttf');
+}
+html, body, header, main, footer, h1, h2, h3, h4, ul, p {
+	padding: 0;
+	margin: 0;
+}
+html * {
+	outline:none;
+	transition: all 0.3s ease-in-out;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	background: #1B1B1B;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+body {
+	overflow-y: auto;
+}
+header, main, footer {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+nav {
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+}
+a, a:focus, a:hover {
+	color: #FFF;
+}
+h1, h2, h3, h4 {
+	font-family: 'Italianno', cursive;
+}
+h1 {
+	font-size: 56px;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 40px;
+}
+h4 {
+	font-size: 32px;
+}
+p {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	font-size: 20px;
+}
+input[type="text"], input[type="telephone"], input[type="email"] {
+	color: #FFF;
+	padding: 16px;
+	background-color: rgba(255,255,255,0.1);
+	transition: all 0.5s ease-in-out;
+}
+input[type="text"]:focus, input[type="telephone"]:focus, input[type="email"]:focus {
+	color: #1B1B1B;
+	background-color: rgba(255,255,255,1);
+}
+
+
+/*
+	Header
+*/
+header {
+	height: 15%;
+	position: relative;
+	/*TODO: browser support*/
+	background: -webkit-radial-gradient(rgba(130,130,130,0.1) 3%, rgba(0,0,0,0.1) 97%);
+}
+.logo {
+	display: inline-block;
+}
+.logo * {
+	font-family: 'Italianno', cursive !important;
+}
+.logo > h1 {
+	display: inline-block;
+}
+.logo > object {
+	width: 56px;
+	height: 56px;
+	margin-right: 16px;
+	vertical-align: top;
+	display: inline-block;
+}
+.nav {
+	/*padding: 8px;*/
+}
+.nav > ul > li {
+	display: inline-block;
+}
+.nav > ul > li + li {
+	margin-left: 20px;
+}
+.nav > ul > li > a {
+	padding-right: 0;
+	padding-left: 0;
+	font-size: 20px;
+	color: #fff; /* IE8 proofing */
+	color: rgba(255,255,255,.75);
+	border-bottom: 2px solid transparent;
+}
+.nav > ul > li > a:hover, .nav > li > a:focus {
+	background-color: transparent;
+	border-bottom-color: #a9a9a9;
+	border-bottom-color: rgba(255,255,255,.25);
+}
+.nav > ul > .active > a, .nav > ul > .active > a:hover, .nav > ul > .active > a:focus {
+	color: #fff;
+	border-bottom-color: #fff;
+}
+
+
+/*
+	Main
+*/
+main {
+	height: 82%;
+}
+.bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-clip: padding-box;
+	box-shadow: #000000 0px 0px 160px inset;
+}
+
+
+/*
+	about
+*/
+.text-box {
+	padding: 32px;
+	max-width: 900px;
+	margin-top: 32px;
+	margin: auto;
+	/*TODO: need broswer support*/
+	background: -webkit-radial-gradient(rgba(0,0,0,0.7) 25%, rgba(0, 0, 0, 0) 70%);
+}
+.text-box > p {
+	text-indent: 32px;
+	text-align: left;
+	padding-bottom: 16px;
+	padding-top: 16px;
+}
+
+
+/*
+	contact
+*/
+.contactForm > div > input {
+	/*width: 50%;*/
+	border: none;
+	border-radius: 1px;
+}
+.responseText {
+	width: 100%;
+	text-align: center;
+	min-height: 24px;
+}
+.seText {
+	width: 100%;
+	text-align: center;
+	min-height: 16px;
+}
+.phone-number:hover {
+	color: #D4AF37;
+}
+
+
+/*
+	jewelry
+*/
+.list {
+	text-align: left;
+}
+.item {
+	width: 70%;
+	/*margin: 32px auto;*/
+	max-width: 600px;
+	min-width: 300px;
+	transition: all 0.5s ease-in-out;
+}
+.item > img {
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	border: 8px solid rgba(255,255,255,0.1);
+}
+.item:hover {
+	background: rgba(128,128,128,0.3);
+	border: rgba(255,255,255,0.5) 4px double;
+}
+
+
+/*
+	Footer
+*/
+footer {
+	height: 3%;
+}
+
+
+/*
+	Vertical Center
+*/
+.vcp {
+	display: table;
+}
+.vcc {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+/*
+	Margin Padding
+*/
+.m-t-16 {
+	margin-top: 16px;
+}
+.m-t-32 {
+	margin-top: 32px;
+}
+.m-l-32 {
+	margin-left: 32px;
+}
+.m-r-32 {
+	margin-right: 32px;
+}
+.m-t-64 {
+	margin-top: 64px;
+}
+.p-16 {
+	padding: 16px;
+}
+.p-32 {
+	padding: 32px;
+}
+.t-l {
+	text-align: left;
+	text-indent: 32px;
+}
+
+
+/*
+	buttons
+*/
+.button-gold {
+	padding: 16px 32px 16px 32px;
+	margin: 16px 32px 16px 32px;
+	background: #D4AF37;
+	display: inline-block;
+	border-radius: 2px;
+	font-weight: bold;
+	border: none;
+	color: #FFFFFF;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	transition: all 0.2s ease-in-out;
+}
+.button-gold:hover {
+	background: #CEB668;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+}
+.button-gold:active {
+	background: #B7972F;
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.1);
+}
+.gold-f {
+	color: #D4AF37;
+}
+
+
+/*
+	drop down
+*/
+.sort-bar {
+	width: 70%;
+	max-width: 600px;
+	min-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.drop-down {
+	width: 128px;
+	background: #FFF;
+	font-weight: bold;
+	border-radius: 1px;
+	border: 5px solid #FFF;
+}
+
+/*
+	box
+*/
+.glass-box {
+	text-align: left;
+	margin: 32px auto;
+	max-width: 700px;
+	border-radius: 1px;
+	background: rgba(128,128,128,0.1);
+	border: rgba(255,255,255,0.3) 4px double;
+}
+.radial-box-dark {
+	padding: 32px;
+	max-width: 900px;
+	margin-top: 32px;
+	margin: auto;
+	/*TODO: need broswer support*/
+	background: -webkit-radial-gradient(rgba(0,0,0,0.7) 25%, rgba(0, 0, 0, 0) 70%);
+}
+.radial-box-light {
+	padding: 32px;
+	max-width: 900px;
+	margin-top: 32px;
+	margin: auto;
+	/*TODO: need broswer support*/
+	background: -webkit-radial-gradient(rgba(255,255,255,0.1) 25%, rgba(255,255,255,0) 70%);
+}
+
+
+@media screen and (min-width: 900px) {
+	.logo, header nav {
+		position: absolute;
+	}
+	.logo {
+		left: 16px;
+		bottom: 16px;
+		display: inline-block;
+	}
+	header nav {
+		right: 16px;
+		bottom: 16px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	main {
+		height: 77%;
+	}
+	footer {
+		height: 3.4%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	p {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "finitejewelry.net",
+  "version": "1.0.0",
+  "description": "Finite Jewelry",
+  "main": "app.js",
+  "dependencies": {
+    "hapi": "^11.0.2",
+    "hapi-marko": "^0.3.1",
+    "inert": "^3.2.0",
+    "marko": "^2.7.28"
+  },
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js",
+    "startNodejs": "nodejs app.js",
+    "startForever": "forever start --spinSleepTime 10000 app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verge-Web-Development/finitejewelry.net.git"
+  },
+  "author": "Alexander Elias",
+  "license": "C",
+  "bugs": {
+    "url": "https://github.com/Verge-Web-Development/finitejewelry.net/issues"
+  },
+  "homepage": "https://github.com/Verge-Web-Development/finitejewelry.net#readme"
+}

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="Finite Designer Jewlery. Affordable quality jewlery with an edgy hardcore feel.">
+	<meta name="author" content="Verge Web Development LLC - Alexander Elias">
+	<meta name="keywords" content="">
+
+	<title>${data.title}</title>
+
+	<!-- Fonts -->
+	<!-- <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'> -->
+	<!-- <link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css" rel="stylesheet" type="text/css"> -->
+	<link  href="/static/angular/1.0.0-angular-material.min.css" rel="stylesheet" type="text/css">
+	<link href="/static/css/master.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="Index" ng-controller="IndexController as IC" ng-cloak>
+	<header class="vcp">
+	<div class="vcc">
+		<include template="../marginals/header.marko" template-data="data"/>
+	</div>
+	</header>
+
+	<div class="bg">
+		<main class="vcp">
+		<div class="vcc">
+			<include template="$data.includeName" template-data="data"/>
+		</div>
+		</main>
+
+		<footer class="vcp">
+		<div class="vcc">
+			<include template="../marginals/footer.marko" template-data="data"/>
+		</div>
+		</footer>
+	</div>
+
+</body>
+
+<!-- Angular Material Dependencies -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script> -->
+<script src="/static/angular/1.4.8-angular.min.js"></script>
+<script src="/static/angular/1.4.8-angular-animate.min.js"></script>
+<script src="/static/angular/1.4.8-angular-aria.min.js"></script>
+<script src="/static/angular/1.0.0-angular-material.min.js"></script>
+
+<script src="/static/js/master.js"></script>
+</html>
