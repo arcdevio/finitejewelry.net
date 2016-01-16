@@ -2,29 +2,50 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<meta name="description" content="Finite Designer Jewlery. Affordable quality jewlery with an edgy hardcore feel.">
+	<meta name="description" content="Finite Designer Jewlery. Affordable quality jewelry with an edgy hardcore feel">
 	<meta name="author" content="Verge Web Development LLC - Alexander Elias">
 	<meta name="keywords" content="">
 
+	<base href="/">
+
 	<title>${data.title}</title>
 
-	<!-- Fonts -->
-	<!-- <link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'> -->
-	<!-- <link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css" rel="stylesheet" type="text/css"> -->
-	<link  href="/static/angular/1.0.0-angular-material.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="/static/angular/1.0.0-angular-material.min.css" rel="stylesheet" type="text/css">
 	<link href="/static/css/master.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="/static/menu/menu.css"/>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/static/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/static/images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#fff">
+	<meta name="msapplication-TileImage" content="/static/images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#fff">
+
 </head>
-<body ng-app="Index" ng-controller="IndexController as IC" ng-cloak>
+<body ng-app="master" ng-controller="MasterController as MC">
+
 	<header class="vcp">
 	<div class="vcc">
 		<include template="../marginals/header.marko" template-data="data"/>
 	</div>
 	</header>
 
-	<div class="bg">
+	<div class="bg" ng-cloak>
 		<main class="vcp">
 		<div class="vcc">
-			<include template="$data.includeName" template-data="data"/>
+			<include template="$data.includeName" template-data="data" ng-cloak/>
 		</div>
 		</main>
 
@@ -36,16 +57,27 @@
 	</div>
 
 </body>
-
-<!-- Angular Material Dependencies -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script> -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script> -->
 <script src="/static/angular/1.4.8-angular.min.js"></script>
 <script src="/static/angular/1.4.8-angular-animate.min.js"></script>
 <script src="/static/angular/1.4.8-angular-aria.min.js"></script>
 <script src="/static/angular/1.0.0-angular-material.min.js"></script>
-
+<script src="/static/angular/pagination/dirPagination.js"></script>
 <script src="/static/js/master.js"></script>
+
+<!-- Mobile Menu -->
+<script src="/static/menu/menu.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<!-- Mobile Menu -->
+
 </html>
+
+<!-- <script src="/static/angular/1.4.8-angular-sanitize.min.js"></script> -->
+
+<!--<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
+<link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>-->

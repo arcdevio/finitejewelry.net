@@ -1,34 +1,42 @@
 
 <div class="radial-box-light">
-	<h1>Contact Us</h1>
+	<h2>Contact Us</h2>
 
-	<div class="glass-box p-16" layout="row" layout-align="center center">
-		<div class="m-r-32" layout="column">
-			<p>Phone:</p>
-			<p>
-				<a class="phone-number" href="tel:15200000000" itemprop="telephone">520-000-0000</a>
-			</p>
+	<div class=" p-16" layout="row" layout-align="center center" layout-margin>
+		<div class=" glass-box m-r-32" layout="column" layout-align="center center" flex layout-padding>
+			<div>
+				<p>Phone Number:</p>
+				<p>
+					<a class="phone-number" href="tel:15200000000" itemprop="telephone">520-000-0000</a>
+				</p>
+			</div>
 		</div>
-		<div class="m-l-32" layout="column">
-			<p>Hours:</p>
-			<p>
-				<time>M-F</time> &amp; <time>9-5</time>
-			</p>
+		<div class="glass-box m-l-32" layout="column" layout-align="center center" flex layout-padding>
+			<div>
+				<p>Office Hours:</p>
+				<p>
+					<time>Monday-Friday</time> &amp; <time>9-5</time>
+				</p>
+			</div>
 		</div>
 	</div>
 
-	<form class="contactForm glass-box p-16" layout="column" method="post" >
-		<div class="responseText"></div>
+	<form class="contactForm glass-box p-16" layout="column">
+		<div class="responseText">{{MC.responseText}}</div>
 		<div layout="column" layout-gt-xs="row" layout-align="center center">
-			<input type="text" name="firstName" placeholder="First Name" flex layout-margin>
-			<input type="text" name="lastName" placeholder="Last Name" flex layout-margin>
+			<input ng-model="MC.emailForm.firstname" type="text" name="firstname" placeholder="First Name" flex layout-margin autofocus>
+			<input ng-model="MC.emailForm.lastlame" type="text" name="lastname" placeholder="Last Name" flex layout-margin>
 		</div>
 		<div layout="column" layout-gt-xs="row" layout-align="center center">
-			<input type="email" name="email" placeholder="Email Address" flex required="true" layout-margin>
-			<input type="telephone" name="phone" placeholder="Phone Number" flex layout-margin>
+			<input ng-model="MC.emailForm.email" type="email" name="email" placeholder="Email Address" flex layout-margin required>
+			<input ng-model="MC.emailForm.phone" type="telephone" name="phone" placeholder="Phone Number" flex layout-margin>
 		</div>
-		<div layout="row" layout-align="center">
-			<input class="button-gold" type="button" value="Send" name="button" layout-margin>
+		<div layout="column" layout-gt-xs="row" layout-align="center center">
+			<textarea ng-model="MC.emailForm.message" type="text" name="message" placeholder="Message" flex layout-margin>
+		</div>
+		<div layout="column" layout-align="center center">
+			<input class="button-gold no-transition" ng-hide="MC.sendingEmail" ng-click="MC.submitEmail(MC.emailForm)" type="submit" value="Send" layout-margin>
+			<md-progress-circular class="no-transition" ng-show="MC.sendingEmail" md-mode="indeterminate" md-diameter="60"></md-progress-circular>
 		</div>
 	</form>
 </div>

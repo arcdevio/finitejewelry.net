@@ -4,16 +4,19 @@
   "description": "Finite Jewelry",
   "main": "app.js",
   "dependencies": {
-    "hapi": "^11.0.2",
-    "hapi-marko": "^0.3.1",
+    "hapi": "^11.1.4",
     "inert": "^3.2.0",
-    "marko": "^2.7.28"
+    "marko": "^2.8.2",
+    "mongodb": "^2.1.4",
+    "nodemailer": "^1.11.0",
+    "vision": "^4.0.1"
+  },
+  "hoster": {
+    "port": "8000"
   },
   "scripts": {
     "test": "nodemon app.js",
-    "start": "node app.js",
-    "startNodejs": "nodejs app.js",
-    "startForever": "forever start --spinSleepTime 10000 app.js"
+    "start": "pm2 start app.js"
   },
   "repository": {
     "type": "git",

@@ -1,12 +1,33 @@
+var Hapi = require('hapi');
+var Routes = require('./routes');
+var Marko = require('marko');
+var Registers = require('./registers');
+var MongoClient = require('./database');
 
-const Hapi = require('hapi');
-const Routes = require('./routes');
-const Registers = require('./registers')
+MongoClient.connect(function () {
+	console.log('MongoDb Connected');
+});
 
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 
-server.connection({ port: process.env.PORT || 8080 });
-server.register(Registers, function(err){ if(err){ console.log(err) }});
+server.connection({ port: process.env.npm_package_hoster_port });
+server.register(Registers, function(error){ if(error){ console.log(error); }});
+
+server.views({
+	engines: {
+		marko: {
+			compile: function (src, options) {
+				var template = Marko.load(options.filename, src);
+
+				return function (context) {
+					return template.renderSync(context);
+				};
+			}
+		}
+	},
+	path: __dirname + '/templates'
+});
+
 server.route(Routes);
 
 server.start(function () {
