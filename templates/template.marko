@@ -10,10 +10,9 @@
 
 	<title>${data.title}</title>
 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="/static/angular/1.0.0-angular-material.min.css" rel="stylesheet" type="text/css">
 	<link href="/static/css/master.css" rel="stylesheet" type="text/css">
-	<link type="text/css" rel="stylesheet" href="/static/menu/menu.css"/>
+	<link href="/static/menu/menu.css" rel="stylesheet" type="text/css"/>
 
 	<link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicon/apple-icon-60x60.png">
@@ -32,7 +31,6 @@
 	<meta name="msapplication-TileColor" content="#fff">
 	<meta name="msapplication-TileImage" content="/static/images/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#fff">
-
 </head>
 <body ng-app="master" ng-controller="MasterController as MC">
 
@@ -57,12 +55,15 @@
 	</div>
 
 </body>
-<script src="/static/angular/1.4.8-angular.min.js"></script>
-<script src="/static/angular/1.4.8-angular-animate.min.js"></script>
-<script src="/static/angular/1.4.8-angular-aria.min.js"></script>
-<script src="/static/angular/1.0.0-angular-material.min.js"></script>
-<script src="/static/angular/pagination/dirPagination.js"></script>
-<script src="/static/js/master.js"></script>
+
+<if test=" data.includeName === '../includes/jewelry.marko' || data.includeName === '../includes/item.marko' || data.includeName === '../includes/contact.marko' ">
+	<script src="/static/angular/1.4.8-angular.min.js"></script>
+	<script src="/static/angular/1.4.8-angular-animate.min.js"></script>
+	<script src="/static/angular/1.4.8-angular-aria.min.js"></script>
+	<script src="/static/angular/1.0.0-angular-material.min.js"></script>
+	<script src="/static/angular/pagination/dirPagination.min.js"></script>
+	<script src="/static/js/master.js"></script>
+</if>
 
 <!-- Mobile Menu -->
 <script src="/static/menu/menu.js"></script>
@@ -72,7 +73,6 @@
 </html>
 
 <!-- <script src="/static/angular/1.4.8-angular-sanitize.min.js"></script> -->
-
 <!--<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
 <link href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>

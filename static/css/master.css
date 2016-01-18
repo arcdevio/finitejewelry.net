@@ -181,9 +181,8 @@ main {
 	min-width: 300px;
 	transition: all 0.5s ease-in-out;
 }
-.items > a > img {
-	width: 150px;
-	height: 150px;
+.items > div > img {
+	width: 250px;
 	margin: auto;
 }
 
@@ -203,42 +202,45 @@ main {
 }
 .image-box > .wrap {
 	position: relative;
-	width: 300px;
-	height: 300px;
+	width: 320px;
+	min-height: 225px;
 	margin: auto;
 }
 .image-box > .wrap >  img {
-	width: 300px;
-	height: 300px;
+	width: 320px;
 	margin: auto;
 	z-index: 0;
 	opacity: 0;
+	display: none;
 	border-radius: 1px;
-	position: absolute;
+	/*position: absolute;*/
 }
 .image-box .activeImage {
+	display: block !important;
 	opacity: 1 !important;
 	z-index: 1 !important;
 }
 .image-box .backwards {
-	height: 64px;
 	top: 45%;
 	left: 0px;
 	z-index: 2;
+	cursor: pointer;
 	border-radius: 1px;
 	position: absolute;
+	padding: 16px 8px 16px 8px;
 }
 .image-box .forwards {
-	height: 64px;
 	top: 45%;
 	right: 0px;
 	z-index: 2;
+	cursor: pointer;
 	border-radius: 1px;
 	position: absolute;
+	padding: 16px 8px 16px 8px;
 }
 .image-box .arrow {
 	font-size: 64px;
-	cursor: pointer;
+	pointer-events: none;
 	color: rgba(255, 255, 255, 0.6);
 }
 .image-box .forwards:hover, .image-box .backwards:hover {
@@ -453,11 +455,10 @@ footer div {
 	-webkit-appearance: none;
 	padding: 16px 64px 16px 16px;
 }
-.drop-down md-icon {
-	top: 8px;
+.drop-down object {
+	top: 0px;
 	right: 0px;
-	color: #A9A9A9;
-	font-size: 32px;
+	pointer-events: none;
 	position: absolute;
 }
 
@@ -538,19 +539,15 @@ footer div {
 	.image-box > .wrap {
 		margin-top: 32px;
 		width: 280px;
-		height: 280px;
 	}
 	.image-box > .wrap > img {
 		width: 280px;
-		height: 280px;
 	}
 	.image-box .backwards {
-		margin-top: 5px;
 		float: left;
 		position: static;
 	}
 	.image-box .forwards {
-		margin-top: 5px;
 		float: right;
 		position: static;
 	}

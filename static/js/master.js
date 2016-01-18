@@ -30,24 +30,25 @@
 		var activeImage;
 		var firstImage;
 		var lastImage;
+		var imagesLength = 0;
 
-		self.imagesLength = 0;
 		self.activeImageIndex = 0;
 		self.product = null;
 		self.setProduct = setProduct;
-		self.setForwardsImage = setForwardsImage;
-		self.setBackwardsImage = setBackwardsImage;
+		self.setForwardImage = setForwardImage;
+		self.setBackwardImage = setBackwardImage;
 
 		function setProduct(object) {
 			self.product = object;
-			self.imagesLength = self.product.images.length;
+			imagesLength = self.product.images.length;
 
 			firstImage = 0;
-			lastImage = self.imagesLength - 1;
+			lastImage = imagesLength - 1;
 		}
 
-		function setForwardsImage () {
-			if (self.imagesLength > 1) {
+
+		function setForwardImage () {
+			if (imagesLength > 1) {
 				activeImage = self.activeImageIndex;
 
 				if (activeImage === lastImage) {
@@ -59,8 +60,8 @@
 			}
 		}
 
-		function setBackwardsImage () {
-			if (self.imagesLength > 1) {
+		function setBackwardImage () {
+			if (imagesLength > 1) {
 				activeImage = self.activeImageIndex;
 
 				if (activeImage === firstImage) {
