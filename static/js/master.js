@@ -27,50 +27,49 @@
 		/*
 			item.marko
 		*/
-		var activeImage;
-		var firstImage;
-		var lastImage;
-		var imagesLength = 0;
+		if (pathname != '/jewelry' && pathname != '/contact') {
+			var activeImage;
+			var firstImage;
+			var lastImage;
+			var imagesLength = 0;
 
-		self.activeImageIndex = 0;
-		self.product = null;
-		self.setProduct = setProduct;
-		self.setForwardImage = setForwardImage;
-		self.setBackwardImage = setBackwardImage;
+			self.activeImageIndex = 0;
+			self.product = null;
 
-		function setProduct(object) {
-			self.product = object;
-			imagesLength = self.product.images.length;
+			self.setProduct = function (object) {
+				self.product = object;
+				imagesLength = self.product.images.length;
 
-			firstImage = 0;
-			lastImage = imagesLength - 1;
-		}
+				firstImage = 0;
+				lastImage = imagesLength - 1;
+			};
 
 
-		function setForwardImage () {
-			if (imagesLength > 1) {
-				activeImage = self.activeImageIndex;
+			self.setForwardImage = function () {
+				if (imagesLength > 1) {
+					activeImage = self.activeImageIndex;
 
-				if (activeImage === lastImage) {
-					activeImage = firstImage;
-					self.activeImageIndex = activeImage;
-				} else {
-					self.activeImageIndex = activeImage + 1;
+					if (activeImage === lastImage) {
+						activeImage = firstImage;
+						self.activeImageIndex = activeImage;
+					} else {
+						self.activeImageIndex = activeImage + 1;
+					}
 				}
-			}
-		}
+			};
 
-		function setBackwardImage () {
-			if (imagesLength > 1) {
-				activeImage = self.activeImageIndex;
+			self.setBackwardImage = function () {
+				if (imagesLength > 1) {
+					activeImage = self.activeImageIndex;
 
-				if (activeImage === firstImage) {
-					activeImage = lastImage;
-					self.activeImageIndex = activeImage;
-				} else {
-					self.activeImageIndex = activeImage - 1;
+					if (activeImage === firstImage) {
+						activeImage = lastImage;
+						self.activeImageIndex = activeImage;
+					} else {
+						self.activeImageIndex = activeImage - 1;
+					}
 				}
-			}
+			};
 		}
 
 

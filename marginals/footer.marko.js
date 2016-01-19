@@ -4,7 +4,7 @@ function create(__helpers) {
       notEmpty = __helpers.ne;
 
   return function render(data, out) {
-    out.w('<div>&#169; 2015 Verge Web Development LLC</div>');
+    out.w('<a href="http://verge.website/"><div>&#169; 2015 Verge Web Development LLC</div></a>');
   };
 }
 (module.exports = require("marko").c(__filename)).c(create);

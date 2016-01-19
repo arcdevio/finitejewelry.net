@@ -105,7 +105,7 @@ module.exports = [
 
 			var mailOptions = {
 				from: 'Finite <contact.form@finitejewelry.net>',
-				to: 'vergewd@gmail.com',
+				to: 'finitedesignerjewelry@gmail.com',
 				subject: 'Finite Inquiry',
 				html: 'First Name: '+ payload.firstname+'<br>'+'Last Name: ' + payload.lastname + '<br>' + 'Phone: ' + payload.phone + '<br>' + 'Email: ' + payload.email + '<br>'+'Message: ' + payload.message
 			};
