@@ -81,7 +81,7 @@
 		if (pathname === '/jewelry') {
 			var sort = {
 				search: '',
-				option: 'price',
+				option: '-price',
 				options: [
 					{ value: 'price', text: 'Low-High'},
 					{ value: '-price', text: 'High-Low'}
