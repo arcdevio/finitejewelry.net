@@ -518,10 +518,10 @@ footer div {
 	.sort-bar {
 		width: 100%;
 	}
-	.items .items-title {
+	.items-title {
 		text-align: center;
 	}
-	.items .items-price {
+	.items-price {
 		text-align: center;
 	}
 	.items > div {
