@@ -560,6 +560,6 @@ footer div {
 /*
 	Browser compatibility
 */
-.ie-fix {
+.ie-fix-max-width {
 	max-width: 95%;
 }
