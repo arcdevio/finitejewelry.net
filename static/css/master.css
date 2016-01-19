@@ -176,10 +176,12 @@ main {
 }
 .items > div {
 	width: 100%;
+	display: inline-block;
 }
 .items > div > img {
 	width: 250px;
 	margin: auto;
+	display: block;
 }
 /*
 
@@ -534,13 +536,13 @@ footer div {
 	.items-price {
 		text-align: center;
 	}
-	.items > div {
+	/*.items > div {
 		width: auto;
 	}
 	.items > div > img {
 		display: block;
 		margin: auto;
-	}
+	}*/
 	/*
 		product.marko
 	*/
