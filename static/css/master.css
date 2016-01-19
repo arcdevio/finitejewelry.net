@@ -175,6 +175,9 @@ main {
 	text-align: left;
 	width: 100%;
 }
+.list .ie-fix {
+	max-width: 95%;
+}
 .items {
 	width: 80%;
 	max-width: 600px;
