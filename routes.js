@@ -88,7 +88,7 @@ module.exports = [
 				if (error) throw error;
 
 				var data = {
-					includeName: '../includes/item.marko',
+					includeName: '../includes/product.marko',
 					title: result.title + ' | Finite Designer Jewlery',
 					product: JSON.stringify(result)
 				};

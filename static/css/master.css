@@ -1,7 +1,3 @@
-/*@font-face {
-	font-family: 'Italianno';
-	src: url('../fonts/Italianno/Italianno-Regular.ttf');
-}*/
 html, body, header, main, footer, h1, h2, h3, h4, ul, p {
 	padding: 0;
 	margin: 0;
@@ -38,7 +34,6 @@ a, a:focus, a:hover {
 	color: #FFF;
 }
 h1, h2, h3, h4 {
-	/*font-family: 'Italianno', cursive;*/
 	font-family: "Times New Roman", Times, serif;
 	font-weight: 100;
 	letter-spacing: 1px;
@@ -61,7 +56,6 @@ p {
 	margin-bottom: 16px;
 	font-size: 18px;
 }
-
 select::-ms-expand {
 	display: none;
 }
@@ -79,10 +73,9 @@ input[type="text"]:focus, input[type="telephone"]:focus, input[type="email"]:foc
 .no-transition {
 	transition: none !important;
 }
-
-
 /*
-	Header
+
+	header
 */
 header {
 	height: 15%;
@@ -105,16 +98,14 @@ header {
 	display: block;
 }
 .title * {
-	/*font-family: 'Italianno', cursive !important;*/
 	font-family: "Times New Roman", Times, serif;
 	font-weight: 100;
 	letter-spacing: 1px;
 	font-size: 32px;
 }
-
-
 /*
-	Main
+
+	main
 */
 main {
 	height: 74.5%;
@@ -126,9 +117,8 @@ main {
 	background-clip: padding-box;
 	box-shadow: #000000 0px 0px 160px inset;
 }
-
-
 /*
+
 	about
 */
 .text-box {
@@ -144,9 +134,8 @@ main {
 	padding-bottom: 16px;
 	padding-top: 16px;
 }
-
-
 /*
+
 	contact
 */
 .contactForm > div > input {
@@ -169,9 +158,8 @@ main {
 .phone-number:hover {
 	color: #D4AF37;
 }
-
-
 /*
+
 	jewelry
 */
 .list {
@@ -192,16 +180,10 @@ main {
 	width: 250px;
 	margin: auto;
 }
-
 /*
-	item
+
+	product
 */
-.item {
-	width: 70%;
-	max-width: 600px;
-	min-width: 300px;
-	transition: all 0.5s ease-in-out;
-}
 .image-box {
 	min-width: 430px;
 	position: relative;
@@ -256,8 +238,6 @@ main {
 	background: rgba(128,128,128,0.3);
 	border: rgba(255,255,255,0.5) 4px double;
 }
-
-
 /*
 	Footer
 */
@@ -267,8 +247,6 @@ footer {
 footer div {
 	color: rgba(255, 255, 255, 0.6);
 }
-
-
 /*
 	Alex's custom pagination style
 */
@@ -316,8 +294,6 @@ footer div {
 .pagination li.disabled:hover a {
 	cursor: not-allowed;
 }
-
-
 /*
 	Vertical Center
 */
@@ -329,8 +305,6 @@ footer div {
 	display: table-cell;
 	vertical-align: middle;
 }
-
-
 /*
 	Margin Padding
 */
@@ -367,8 +341,6 @@ footer div {
 		margin-right: 0px !important;
 	}
 }
-
-
 /*
 	buttons
 */
@@ -422,8 +394,6 @@ footer div {
 	color: #D4AF37;
 	font-size: 40px;
 }
-
-
 /*
 	drop down
 */
@@ -468,7 +438,6 @@ footer div {
 	pointer-events: none;
 	position: absolute;
 }
-
 /*
 	box
 */
@@ -543,6 +512,31 @@ footer div {
 	.radial-box-light {
 		padding: 5px;
 	}
+	/*
+		jewelry.marko
+	*/
+	.sort-bar {
+		width: 100%;
+	}
+	.items .items-title {
+		text-align: center;
+	}
+	.items .items-price {
+		text-align: center;
+	}
+	.items > div {
+		width: auto;
+	}
+	.items > div > img {
+		display: block;
+		margin: auto;
+	}
+	/*
+		product.marko
+	*/
+	.product-price {
+		text-align: center;
+	}
 	.image-box > .wrap {
 		width: 280px;
 	}
@@ -556,26 +550,6 @@ footer div {
 	.image-box .forwards {
 		float: right;
 		position: static;
-	}
-	.sort-bar {
-		width: 100%;
-	}
-
-	/*
-		jewelry.marko
-	*/
-	.items .title {
-		text-align: center;
-	}
-	.items .price {
-		text-align: center;
-	}
-	.items > div {
-		width: auto;
-	}
-	.items > div > img {
-		display: block;
-		margin: auto;
 	}
 }
 
