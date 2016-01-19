@@ -132,12 +132,14 @@ module.exports = [
 		path: '/api/getAllProducts',
 		handler: function (req, res) {
 
+			//test data
+			//res(require('./dummydata'));
+
 			var products = MongoClient.db().collection('products');
 			products.find().toArray(function(error, result) {
 				if (error) throw error;
 				res(result);
 			});
-
 		}
 	}
 

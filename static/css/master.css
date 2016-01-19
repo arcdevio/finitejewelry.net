@@ -1,3 +1,4 @@
+
 html, body, header, main, footer, h1, h2, h3, h4, ul, p {
 	padding: 0;
 	margin: 0;
@@ -321,7 +322,7 @@ footer div {
 	margin-right: 32px;
 }
 .m-t-64 {
-	margin-top: 64px !important;
+	margin-top: 64px;
 }
 .p-16 {
 	padding: 16px;
@@ -398,21 +399,19 @@ footer div {
 	drop down
 */
 .sort-bar {
-	width: 70%;
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.sort-bar input {
+	left: 16px;
 	width: 150px;
-	margin-right: 4px;
+	position: fixed;
 }
-.sort-bar .search:focus {
-	width: 100%;
+.sort-bar > input {
+	width: 150px;
+	margin: 16px auto;
+	display: inline-block;
 }
 .drop-down {
 	width: 150px;
       border-radius: 1px;
+	display: inline-block;
 	position: relative;
 	background: rgba(255,255,255,0.1);
 }
@@ -467,9 +466,23 @@ footer div {
 }
 
 
+@media screen and (max-width: 1080px) {
+	.items {
+		width: 65%;
+	}
+}
+
 @media screen and (max-width: 960px) {
 	.image-box {
 		min-width: 100%;
+	}
+	.sort-bar {
+		width: 100%;
+		margin-top: 64px;
+		position: static;
+	}
+	.sort-bar > input {
+		margin-right: 8px;
 	}
 }
 @media screen and (min-width: 900px) {
@@ -515,9 +528,6 @@ footer div {
 	/*
 		jewelry.marko
 	*/
-	.sort-bar {
-		width: 100%;
-	}
 	.items-title {
 		text-align: center;
 	}

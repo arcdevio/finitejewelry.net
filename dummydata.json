@@ -1,0 +1,30 @@
+[
+	{
+	    "_id": "569d37497c38047e31581994",
+	    "title": "Fire Agate and freshwater pearl bracelet",
+	    "description": "Blue dyed fire agate quartz stones and freshwater pearl bracelet with a clasp closure. Varied marble pattern makes this a one of a kind multipurpose piece!",
+	    "price": 50,
+	    "buyLink": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SELASHRR9KSXN",
+	    "images": [
+	        {
+	            "src": "/products/569d37497c38047e31581994/fire-agate-freshwater-pearl-bracelet-0.jpg",
+	            "alt": "Fire Agate and freshwater pearl bracelet",
+	            "index": 0
+	        }
+	    ]
+	},
+	{
+	    "_id": "569d43d57c38047e31581995",
+	    "title": "Black glass and stone bead heavy duty magnet bracelet",
+	    "description": "Black glass and stone bead on large magnet bracelet Powerful wrist band not for the meek or mild! Can you handle it?",
+	    "price": 25,
+	    "buyLink": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WAVZ83VFG28AW",
+	    "images": [
+	        {
+	            "src": "/products/569d43d57c38047e31581995/black-glass-stone-bead-heavy-duty-magnet-bracelet-0.jpg",
+	            "alt": "Black glass and stone bead heavy duty magnet bracelet",
+	            "index": 0
+	        }
+	    ]
+	}
+]
