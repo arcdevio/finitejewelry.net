@@ -172,8 +172,9 @@ main {
 	jewelry
 */
 .list {
-	text-align: left;
 	width: 100%;
+	text-align: left;
+	list-style: none;
 }
 .items {
 	width: 80%;
@@ -316,6 +317,7 @@ footer div {
 */
 .vcp {
 	display: table;
+	table-layout: fixed;
 }
 .vcc {
 	display: table-cell;
@@ -553,6 +555,10 @@ footer div {
 	.sort-bar {
 		width: 100%;
 	}
+	.items > div > img {
+		display: block;
+		margin: auto;
+	}
 }
 
 
@@ -560,6 +566,16 @@ footer div {
 /*
 	Browser compatibility
 */
-.ie-fix-max-width {
-	max-width: 95%;
+.ie-fixes {
+	max-width: 97%;
+}
+@media screen and (max-width: 600px) {
+	.ie-fixes > p {
+		display: block;
+		margin: auto;
+	}
+	.ie-fixes > div > a {
+		display: block;
+		margin: auto;
+	}
 }

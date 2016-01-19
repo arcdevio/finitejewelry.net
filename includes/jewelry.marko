@@ -14,12 +14,12 @@
 
 	<ul class="list">
 		<li class="items glass-box" dir-paginate="item in MC.items | filter:MC.sort.search | orderBy:MC.sort.option:MC.sort.direction | itemsPerPage: 10" layout="column" layout-align-xs="center center" layout-gt-xs="row" layout-align-gt-xs="left center" layout-padding>
-			<div layout="row" layout-align="center center" flexr>
+			<div layout="row" layout-align="center center">
 				<img ng-src="/static/images{{item.images[0].src}}" alt="{{item.images[0].alt}}" />
 			</div>
 
-			<div layout="row" layout-align="center center" flex layout-padding>
-				<div class="ie-fix-max-width" layout="column">
+			<div layout="row" layout-align="center center" layout-padding>
+				<div class="ie-fixes" layout="column">
 					<p>{{item.title}}</p>
 					<p>{{item.description}}</p>
 					<p>{{item.price | currency}}</p>
