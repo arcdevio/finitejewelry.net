@@ -213,7 +213,6 @@ main {
 	opacity: 0;
 	display: none;
 	border-radius: 1px;
-	/*position: absolute;*/
 }
 .image-box .activeImage {
 	display: block !important;
