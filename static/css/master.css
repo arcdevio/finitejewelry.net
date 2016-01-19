@@ -175,9 +175,6 @@ main {
 	text-align: left;
 	width: 100%;
 }
-.list .ie-fix {
-	max-width: 95%;
-}
 .items {
 	width: 80%;
 	max-width: 600px;
@@ -206,7 +203,7 @@ main {
 .image-box > .wrap {
 	position: relative;
 	width: 320px;
-	min-height: 225px;
+	min-height: 100px;
 	margin: auto;
 }
 .image-box > .wrap >  img {
@@ -557,4 +554,13 @@ footer div {
 	.sort-bar {
 		width: 100%;
 	}
+}
+
+
+
+/*
+	Browser compatibility
+*/
+.ie-fix {
+	max-width: 95%;
 }

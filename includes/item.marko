@@ -9,15 +9,15 @@
 			<div class="wrap" layout="column" layout-align="center center">
 				<img ng-class="{activeImage: MC.activeImageIndex == image.index }" ng-src="/static/images{{image.src}}" alt="{{image.alt}}" ng-repeat="image in MC.product.images" ng-cloak/>
 			</div>
-			<div class="backwards" ng-click="MC.setBackwardImage()">
+			<div ng-show="MC.isMoreThanOneImage" class="backwards" ng-click="MC.setBackwardImage()">
 				<object class="arrow" data="/static/images/icons/keyboard-arrow-left.svg" type="image/svg+xml">&#xE314;</object>
 			</div>
-			<div class="forwards" ng-click="MC.setForwardImage()">
+			<div ng-show="MC.isMoreThanOneImage" class="forwards" ng-click="MC.setForwardImage()">
 				<object class="arrow" data="/static/images/icons/keyboard-arrow-right.svg" type="image/svg+xml">&#xE314;</object>
 			</div>
 		</div>
 		<div layout="row" layout-align="center center" flex layout-padding>
-			<div layout="column" layout-align="center center">
+			<div class="ie-fix" layout="column" layout-align="center center">
 				<p>{{MC.product.description}}</p>
 				<p>{{MC.product.price | currency}}</p>
 				<a ng-href="{{MC.product.buyLink}}" class="button-gold">Buy Now</a>

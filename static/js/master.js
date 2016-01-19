@@ -35,6 +35,7 @@
 
 			self.activeImageIndex = 0;
 			self.product = null;
+			self.isMoreThanOneImage = false;
 
 			self.setProduct = function (object) {
 				self.product = object;
@@ -42,6 +43,7 @@
 
 				firstImage = 0;
 				lastImage = imagesLength - 1;
+				if (imagesLength > 1) self.isMoreThanOneImage = true;
 			};
 
 
