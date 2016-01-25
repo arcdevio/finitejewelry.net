@@ -13,16 +13,16 @@
 			<object id="menuIcon" type="image/svg+xml" data="/static/menu/menuIcon.svg">&#9776;</object>
 
 			<ul id="list">
-				<li ng-class="{active:MC.page == 'home'}">
+				<li ng-class="{active:MC.page === 'home'}">
 					<a href="/">Home</a>
 				</li>
-				<li ng-class="{active:MC.page == 'jewelry'}">
+				<li ng-class="{active:MC.page === 'jewelry'}">
 					<a href="/jewelry">Jewelry</a>
 				</li>
-				<li ng-class="{active:MC.page == 'about'}">
+				<li ng-class="{active:MC.page === 'about'}">
 					<a href="/about">About</a>
 				</li>
-				<li ng-class="{active:MC.page == 'contact'}">
+				<li ng-class="{active:MC.page === 'contact'}">
 					<a href="/contact">Contact</a>
 				</li>
 			</ul>
