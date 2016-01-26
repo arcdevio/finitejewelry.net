@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
             else if(menu.classList[0] === 'active')
             {
                   animation.reverse();
-			window.parent.document.body.style.overflowY = 'initial';
+			window.parent.document.body.style.overflowY = 'auto';
             }
 
 		menu.classList.toggle('active');
