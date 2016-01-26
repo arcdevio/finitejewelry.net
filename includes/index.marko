@@ -1,9 +1,5 @@
 <style>
-	/*.bg { background-image: url('/static/images/bg.jpg'); }*/
 	h1 { text-shadow: #000 0px 0px 16px; }
-	main {
-		height: auto;
-	}
 	main {
 		display: inline !important;
 		table-layout: auto !important;
@@ -23,6 +19,14 @@
 		z-index: 1;
 		width: 100%;
 		position: absolute;
+	}
+	@media screen and (min-width: 701px) {
+		footer * { color: #FFF !important; }
+		footer {
+			position: relative !important;
+			margin-top: -25px !important;
+			height: 25px !important;
+		}
 	}
 	@media screen and (max-width: 700px) {
 		.index-bg-img {
