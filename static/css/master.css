@@ -111,13 +111,13 @@ header {
 main {
 	height: 74.5%;
 }
-.bg {
+/*.bg {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-clip: padding-box;
 	box-shadow: #000000 0px 0px 160px inset;
-}
+}*/
 /*
 
 	about
