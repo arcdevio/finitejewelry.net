@@ -1,6 +1,6 @@
 var Nodemailer = require('nodemailer');
 var ObjectId = require('mongodb').ObjectID;
-var MongoClient = require('./database');
+//var MongoClient = require('./database');
 
 module.exports = [
 	{
@@ -132,14 +132,14 @@ module.exports = [
 		path: '/api/getAllProducts',
 		handler: function (req, res) {
 
-			//test data
-			//res(require('./dummydata'));
+			//dev data
+			res(require('./dummydata'));
 
-			var products = MongoClient.db().collection('products');
-			products.find().toArray(function(error, result) {
-				if (error) throw error;
-				res(result);
-			});
+			// var products = MongoClient.db().collection('products');
+			// products.find().toArray(function(error, result) {
+			// 	if (error) throw error;
+			// 	res(result);
+			// });
 		}
 	}
 

@@ -1,12 +1,47 @@
 <style>
-	.bg { background-image: url('/static/images/bg.jpg'); }
+	/*.bg { background-image: url('/static/images/bg.jpg'); }*/
 	/*.radial-box-dark { margin-top: 64px; }*/
 	h1 { text-shadow: #000 0px 0px 16px; }
-	main { height: 100%; }
+	main {
+		height: auto;
+	}
+	main .vcp {
+		display: inline;
+		table-layout: auto;
+		height: auto;
+	}
+	main .vcp > .vcc {
+		display: block;
+		position: relative;
+		height: auto;
+	}
+	.index-bg-img {
+		width: 100%;
+	}
+	.index-radial-box-dark-wrap {
+		bottom: 32px;
+		left: 0px;
+		z-index: 1;
+		width: 100%;
+		position: absolute;
+	}
+	@media screen and (max-width: 700px) {
+		.index-bg-img {
+			height: 300px;
+		}
+		.index-radial-box-dark-wrap {
+			position: static;
+			margin: 64px auto;
+		}
+	}
 </style>
 
-<div class="radial-box-dark">
-	<h1>Classic With An Edge</h1>
-	<p>Finite Designer Jewelry is about creating unique high quality pieces of jewelry using silver, gold and precious stones that represent valuable beauty at an affordable price.</p>
-	<a href="/jewelry" class="button-gold">View Jewlery</a>
+<img class="index-bg-img" src="/static/images/bg.jpg" alt="" />
+
+<div class="index-radial-box-dark-wrap">
+	<div class="radial-box-dark">
+		<h1>Classic With An Edge</h1>
+		<p>Finite Designer Jewelry is about creating unique high quality pieces of jewelry using silver, gold and precious stones that represent valuable beauty at an affordable price.</p>
+		<a href="/jewelry" class="button-gold">View Jewlery</a>
+	</div>
 </div>

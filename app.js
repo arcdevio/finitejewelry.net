@@ -2,11 +2,11 @@ var Hapi = require('hapi');
 var Routes = require('./routes');
 var Marko = require('marko');
 var Registers = require('./registers');
-var MongoClient = require('./database');
-
-MongoClient.connect(function () {
-	console.log('MongoDb Connected');
-});
+// var MongoClient = require('./database');
+//
+// MongoClient.connect(function () {
+// 	console.log('MongoDb Connected');
+// });
 
 var server = new Hapi.Server();
 
