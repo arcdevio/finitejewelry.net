@@ -2,10 +2,10 @@ window.addEventListener('load', function () {
 
 	var animation = new TimelineLite({ paused: true });
       var menu = document.querySelector('#menu');
-      var menuIcon = document.querySelector('#menuIcon');
-      var menuIconTop = menuIcon.contentDocument.querySelector('#menuIconTop');
-      var menuIconMiddle = menuIcon.contentDocument.querySelector('#menuIconMiddle');
-      var menuIconBottom = menuIcon.contentDocument.querySelector('#menuIconBottom');
+      var menuIcon = document.querySelector('#menu-icon');
+      var menuIconTop = menuIcon.contentDocument.querySelector('#menu-icon-top');
+      var menuIconMiddle = menuIcon.contentDocument.querySelector('#menu-icon-middle');
+      var menuIconBottom = menuIcon.contentDocument.querySelector('#menu-icon-bottom');
 
 	animation.add([
 		TweenLite.to(menuIconTop, 1, {
@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
 	      })
 	],0.5);
 
-      function activateMenu() {
+      function activateMenu( ) {
 		if (menu.classList[0] != 'active')
             {
                   animation.play();

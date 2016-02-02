@@ -1,4 +1,12 @@
 
+#menu-wrap {
+	display: table;
+	table-layout: fixed;
+}
+#menu-inner-wrap {
+	display: table-cell;
+	vertical-align: middle;
+}
 #menu > div > div > ul > li > a {
 	color: #FFF;
 	color: rgba(255,255,255,.75);
@@ -21,7 +29,7 @@
 		bottom: 16px;
 		position: absolute;
 	}
-	#menuIcon {
+	#menu-icon {
 		color: #FFF;
 		visibility: hidden;
 	}
@@ -45,7 +53,7 @@
 		position: fixed!important;
 	      transform: translate3d(0%, 0%, 0px) !important;-webkit-transform: translate3d(0%, 0%, 0px) !important;-moz-transform: translate3d(0%, 0%, 0px) !important;-ms-transform: translate3d(0%, 0%, 0px) !important;-o-transform: translate3d(0%, 0%, 0px) !important;
 	}
-	.active #menuIcon {
+	.active #menu-icon {
 		right: 10px;
 	}
 	.active #menu-wrap {
@@ -65,14 +73,14 @@
 		height: 100%;
 		background: rgba(28,28,28,0.95);
 	}
-	#menuIcon {
+	#menu-icon {
 		top: 15px;
 		right: 0px;
 		z-index: 110;
 		position: absolute;
 	      pointer-events: all;
 	}
-	#list {
+	#menu-list {
 		float: left;
 	      width: 100%;
 	      text-align: center;
@@ -80,14 +88,14 @@
 	      text-transform: uppercase;
 		transition: all 0.5s ease; -webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-ms-transition: all 0.5s ease;-o-transition: all 0.5s ease;
 	}
-	#list li {
+	#menu-list li {
 	      padding: 5%;
 	      font-size: 200%;
 	      color: #FFFFFF;
 	      display: block;
 		position: static !important;
 	}
-	#list li:hover {
+	#menu-list li:hover {
 	      color: #C36159;
 	}
 	#media {
@@ -110,7 +118,7 @@
 	#media li object {
 	      pointer-events: none;
 	}
-	#list hr {
+	#menu-list hr {
 	      border: solid 1px white;
 	      width: 70%;
 	}
@@ -125,14 +133,14 @@
 	}
 
 	@media screen and (max-width: 360px), screen and (max-height: 441px) {
-	      #list li {
+	      #menu-list li {
 	            font-size: 180%;
 	            padding: 3%;
 	      }
 	}
 
 	@media screen and (max-height: 380px){
-	      #list {
+	      #menu-list {
 	            padding-top: 20px;
 	      }
 	}
