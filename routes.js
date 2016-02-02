@@ -57,22 +57,11 @@ module.exports = [
 	},
 	{
 		method: 'GET',
-		path: '/success',
+		path: '/gallery',
 		handler: function(req, res){
 			var data = {
-				includeName: '../includes/thanks.marko',
-				title: 'Success | Finite Designer Jewlery'
-			};
-			res.view('template', data);
-		}
-	},
-	{
-		method: 'GET',
-		path: '/cancel',
-		handler: function(req, res){
-			var data = {
-				includeName: '../includes/thanks.marko',
-				title: 'Cancel | Finite Designer Jewlery'
+				includeName: '../includes/gallery.marko',
+				title: 'Gallery | Finite Designer Jewlery'
 			};
 			res.view('template', data);
 		}
@@ -95,6 +84,28 @@ module.exports = [
 				res.view('template', data);
 			});
 
+		}
+	},
+	{
+		method: 'GET',
+		path: '/success',
+		handler: function(req, res){
+			var data = {
+				includeName: '../includes/thanks.marko',
+				title: 'Success | Finite Designer Jewlery'
+			};
+			res.view('template', data);
+		}
+	},
+	{
+		method: 'GET',
+		path: '/cancel',
+		handler: function(req, res){
+			var data = {
+				includeName: '../includes/thanks.marko',
+				title: 'Cancel | Finite Designer Jewlery'
+			};
+			res.view('template', data);
 		}
 	},
 	{
@@ -132,8 +143,8 @@ module.exports = [
 		path: '/api/getAllProducts',
 		handler: function (req, res) {
 
-			//dev data
-			//res(require('./dummydata'));
+			// dev data
+			// res(require('./dummydata'));
 
 			var products = MongoClient.db().collection('products');
 			products.find().toArray(function(error, result) {

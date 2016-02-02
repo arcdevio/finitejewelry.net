@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-	angular.module('master',['ngMaterial','angularUtils.directives.dirPagination']).controller('MasterController',['$http','$location',MasterController]);
+	angular.module('master',['ngMaterial','aseGallery','angularUtils.directives.dirPagination']).controller('MasterController',['$http','$location',MasterController]);
 
 	function MasterController ($http,$location) {
 		var self = this;
@@ -15,6 +15,8 @@
 			case '/jewelry': self.page = 'jewelry';
 				break;
 			case '/about': self.page = 'about';
+				break;
+			case '/gallery': self.page = 'gallery';
 				break;
 			case '/contact': self.page = 'contact';
 				break;
@@ -42,7 +44,6 @@
 				lastImage = imagesLength - 1;
 				if (imagesLength > 1) self.isMoreThanOneImage = true;
 			};
-
 
 			self.setForwardImage = function () {
 				if (imagesLength > 1) {
