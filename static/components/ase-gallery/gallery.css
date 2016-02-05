@@ -10,7 +10,7 @@
 	background: rgba(53,53,53,0.6);
 }
 .gallery-main > .gallery-container-wrap {
-	width: 800px;
+	width: 700px;
 	margin: auto;
 	overflow: hidden;
 }
@@ -20,7 +20,7 @@
 	white-space: nowrap;
 }
 .gallery-main > .gallery-container-wrap > .gallery-container >  img {
-	width: 800px;
+	width: 700px;
 	opacity: 0.1;
 	border-radius: 80%;
 	display: inline-block;

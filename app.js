@@ -10,7 +10,7 @@ MongoClient.connect(function () {
 
 var server = new Hapi.Server();
 
-server.connection({ port: process.env.npm_package_hoster_port });
+server.connection({ port: process.env.port || 8000 });
 server.register(Registers, function(error){ if(error){ console.log(error); }});
 
 server.views({

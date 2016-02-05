@@ -11,12 +11,9 @@
     "nodemailer": "^1.11.0",
     "vision": "^4.0.1"
   },
-  "hoster": {
-    "port": "8000"
-  },
   "scripts": {
     "test": "nodemon app.js",
-    "start": "pm2 start app.js --name finitejewelry.net"
+    "start": "port=8000 pm2 start app.js --name finitejewelry.net"
   },
   "author": "Alexander Elias",
   "license": "C"
