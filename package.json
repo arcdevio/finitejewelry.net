@@ -12,9 +12,9 @@
     "vision": "^4.0.1"
   },
   "scripts": {
-    "test": "nodemon app.js",
-    "start": "port=8001 pm2 start app.js --name finitejewelry.net"
+    "test": "alive_port=8000 nodemon app.js",
+    "start": "port=8000 pm2 start app.js --name finitejewelry.net"
   },
   "author": "Alexander Elias",
-  "license": "C"
+  "license": "SEE IN LICENSE"
 }
