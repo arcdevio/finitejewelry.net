@@ -121,10 +121,12 @@
 						function (success) {
 							self.emailForm = null;
 							self.responseText = success.data;
+							self.sendingEmail = false;
 						},
 						function (error) {
 							console.log(error);
 							self.responseText = error.data;
+							self.sendingEmail = false;
 						}
 					);
 

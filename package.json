@@ -1,6 +1,6 @@
 {
   "name": "finitejewelry.net",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Finite Jewelry",
   "main": "app.js",
   "dependencies": {
@@ -9,6 +9,7 @@
     "marko": "^2.8.2",
     "mongodb": "^2.1.4",
     "nodemailer": "^1.11.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "vision": "^4.0.1"
   },
   "scripts": {

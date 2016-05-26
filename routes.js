@@ -1,6 +1,7 @@
-var Nodemailer = require('nodemailer');
+var SendGridTransport = require('nodemailer-sendgrid-transport');
 var ObjectId = require('mongodb').ObjectID;
 var MongoClient = require('./database');
+var Nodemailer = require('nodemailer');
 
 module.exports = [
 	{
@@ -114,20 +115,22 @@ module.exports = [
 		handler: function (req, res) {
 			var payload = req.payload;
 
-			var mailOptions = {
+			var options = {
+				auth: {
+					api_key: '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'
+				}
+			}
+
+			var transport = Nodemailer.createTransport(SendGridTransport(options));
+
+			var email = {
 				from: 'Finite <contact.form@finitejewelry.net>',
 				to: 'finitedesignerjewelry@gmail.com',
 				subject: 'Finite Inquiry',
 				html: 'First Name: '+ payload.firstname+'<br>'+'Last Name: ' + payload.lastname + '<br>' + 'Phone: ' + payload.phone + '<br>' + 'Email: ' + payload.email + '<br>'+'Message: ' + payload.message
 			};
-			var transporter = Nodemailer.createTransport({
-				service: 'gmail',
-				auth: {
-					user: 'vergemailer@gmail.com',
-					pass: '*Vergemailergoogle'
-				}
-			});
-			transporter.sendMail(mailOptions, function (error, info) {
+
+			transport.sendMail(email, function (error, info) {
 				if (error) {
 					console.log(error);
 					return res(error);
