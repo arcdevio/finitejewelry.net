@@ -2,20 +2,13 @@
   "name": "finitejewelry.net",
   "version": "1.0.1",
   "description": "Finite Jewelry",
-  "main": "app.js",
-  "dependencies": {
-    "hapi": "^11.1.4",
-    "inert": "^3.2.0",
-    "marko": "^2.8.2",
-    "mongodb": "^2.1.4",
-    "nodemailer": "^1.11.0",
-    "nodemailer-sendgrid-transport": "^0.2.0",
-    "vision": "^4.0.1"
-  },
+  "main": "index.js",
   "scripts": {
-    "test": "alive_port=8000 nodemon app.js",
-    "start": "port=8000 pm2 start app.js --name finitejewelry.net"
+	  "build": "rm -r dist/* && rm -r docs/* && muleify pack src dist && muleify pack src docs"
   },
   "author": "Alexander Elias",
-  "license": "SEE IN LICENSE"
+  "license": "SEE IN LICENSE",
+  "dependencies": {
+    "astatine": "^1.1.2"
+  }
 }
