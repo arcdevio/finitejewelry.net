@@ -116,6 +116,7 @@ var productController = function ($scope, $http) {
 var App = angular.module('master', ['ngRoute', 'ngMaterial', 'aseGallery', 'angularUtils.directives.dirPagination']);
 
 App.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
 	$routeProvider
 	.when('/all', {
 		templateUrl : '/jewelry/jewelry-template.html',
@@ -125,6 +126,8 @@ App.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		templateUrl : '/jewelry/product-template.html',
 		controller: ['$scope', '$http', productController]
 	});
+
+
 }]);
 
 App.controller('MasterController', [function () {

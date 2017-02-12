@@ -1,0 +1,32 @@
+<h2 id="usage-example">Usage Example</h2>
+<pre><code class="lang-html">    &lt;ase-gallery images-path=&quot;/static/images/gallery/&quot; components-path=&quot;/static/components/&quot;&gt;&lt;/ase-gallery&gt;
+</code></pre>
+<h3 id="setup-overview">Setup Overview</h3>
+<pre><code>1. Download and install ase-gallery package
+2. Add the ase-gallery element to your html
+3. Add attributes and paths
+5. Create a directory for the gallery images
+6. Add images to the gallery images directory
+7. Create a *gallery.json* file inside the gallery images directory
+8. Configure *gallery.json* file  
+9. Add &#39;ase-gallery&#39; to your Angular module dependencies
+</code></pre><h3 id="components-path">components-path</h3>
+<pre><code>**Required Attribute**
+The `components-path` attribute requires an absolute path to the location of the ase-gallery package.
+</code></pre><h3 id="images-path">images-path</h3>
+<pre><code>**Not Required Attribute**
+The `images-path` attribute accepts an absolute path to a directory for ase-gallery to access the images and the gallery.json file. The default of as-gallery is the path that was provided for `components-path`.
+</code></pre><h3 id="example-of-galery-json-file">Example Of galery.json File</h3>
+<pre><code class="lang-json">    {
+        &quot;images&quot;: [
+            {
+                &quot;src&quot;: &quot;0.png&quot;,
+                &quot;alt&quot;: &quot;Image 0&quot;
+            },
+            {
+                &quot;src&quot;: &quot;1.png&quot;,
+                &quot;alt&quot;: &quot;Image 1&quot;
+            }
+        ]
+    }
+</code></pre>
