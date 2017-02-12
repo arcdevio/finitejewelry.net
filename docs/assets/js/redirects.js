@@ -7,5 +7,5 @@ var jewelryProdcut = new RegExp('\/jewelry\/.*?');
 if (jewelryAll.test(pathname)) {
 	window.location = '/jewelry/#/all';
 } else if (jewelryProdcut.test(pathname)) {
-	window.location = window.location.origin.replace('jewelry/', 'jewelry/#/');
+	window.location = '/jewelry/#/all';
 }
