@@ -1,7 +1,7 @@
 var pathname = window.location.pathname;
 
 
-var jewelryAll = new RegExp('(\/jewelry\/)|(/jewelry)|(/jewelry/all)|/jewelry/all');
+var jewelryAll = new RegExp('(/jewelry/$)|(/jewelry$)|(/jewelry/all$)|/jewelry/all/$');
 var jewelryProdcut = new RegExp('\/jewelry\/.*?');
 
 if (jewelryAll.test(pathname)) {
